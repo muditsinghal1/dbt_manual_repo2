@@ -1,0 +1,25 @@
+my-snowflake-db:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: IYNFTLE.RD49811   #IYNFTLE.RD49811    ##https://mq74393.us-east-2.aws.snowflakecomputing.com
+
+      # User/password auth
+      user: mudit
+      password: "Welcome$1"
+
+      role: sysadmin
+      database: test_db
+      warehouse: compute_wh
+      schema: dbt_mudit
+      threads: 4
+      client_session_keep_alive: False
+      query_tag: dbt_test
+
+      # optional
+      connect_retries: 0 # default 0
+      connect_timeout: 10 # default: 10
+      retry_on_database_errors: False # default: false
+      retry_all: False  # default: false
+      reuse_connections: True # default: True if client_session_keep_alive is False, otherwise None

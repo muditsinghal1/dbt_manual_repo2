@@ -1,0 +1,3 @@
+# Example dbt_project.yml file
+name: 'dbt_snowflake_manual_mudit'
+profile: 'my-snowflake-db'
